@@ -102,3 +102,81 @@ For your reference, here is a basic pinout diagram of the Raspberry Pi GPIO (Gen
 
 These detailed instructions will vary based on the specific ports and protocols required for your project. Refer to the documentation of your Raspberry Pi Hats or electronic modules for precise information on port configurations.
 
+### Example Project (DHT11 with Raspberry Pi)
+
+Follow these steps to set up an example project using the DHT11 sensor with a Raspberry Pi:
+
+1. **Navigate to Documents Folder:**
+   - Open the terminal and type:
+     ```bash
+     cd Documents
+     ```
+
+2. **Create a Python Environment:**
+   - Run the following command to create a virtual environment (replace `env_name` with your preferred environment name):
+     ```bash
+     python -m venv env_name
+     ```
+
+3. **Activate the Environment:**
+   - Activate the environment using:
+     ```bash
+     source env_name/bin/activate
+     ```
+   > You should see an output similar to `(env_name) ~myBot@bot:~/Documents`.
+
+4. **Install the Library:**
+   - Clone the Adafruit Python DHT Sensor library from GitHub:
+     ```bash
+     git clone https://github.com/adafruit/Adafruit_Python_DHT
+     ```
+   - Navigate to the library folder:
+     ```bash
+     cd Adafruit_Python_DHT
+     ```
+
+5. **Install Dependencies:**
+   - Install the required dependencies for the library using:
+     ```bash
+     sudo python setup.py install
+     ```
+
+6. **Create and Run Your Code:**
+   a. **Write Your Own Code:**
+      - Create your Python script using a text editor of your choice:
+        ```bash
+        nano your_script_name.py
+        ```
+      - Type or paste your Python code into the editor.
+      - Save and exit the editor.
+
+   b. **Run Your Custom Code:**
+      - Execute your custom script using:
+        ```bash
+        python your_script_name.py
+        ```
+   
+   c. **Run Example Code:**
+      - Explore example scripts in the `examples` folder:
+        ```bash
+        cd examples
+        ```
+
+      - Run the `simpletest.py` example:
+        ```bash
+        python simpletest.py
+        ```
+
+   > Note: If you encounter an error related to Python, use `python3` instead. For example:
+   > ```bash
+   > python3 your_script_name.py
+   > ```
+   
+   > If you face issues with Git installation, install Git using:
+   > ```bash
+   > sudo apt-get update
+   > sudo apt-get install git
+   > ```
+   > Note: Customize your code based on your specific project requirements. Ensure that your DHT11 sensor is correctly connected to the Raspberry Pi GPIO pins.
+
+This example project provides a hands-on experience in setting up a Python environment, installing libraries, and creating a simple script for the DHT11 sensor on a Raspberry Pi.
