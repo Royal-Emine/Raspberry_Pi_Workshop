@@ -55,6 +55,45 @@ To facilitate better communication with other Raspberry Pi Hats or electronic mo
 
 These detailed instructions will vary based on the specific ports and protocols required for your project. Refer to the documentation of your Raspberry Pi Hats or electronic modules for precise information on port configurations.
 
+### Setup Environment in Python (its a good practice)
+
+Sure thing! To create a virtual environment in Python named `pingu_env` and activate it, you can follow these steps:
+
+1. Open a terminal or command prompt.
+2. Navigate to the directory where you want to create the virtual environment.
+3. Run the following command to create the virtual environment:
+
+   ```bash
+   python -m venv pingu_env
+   ```
+
+   This assumes that you have Python installed and added to your system's PATH.
+
+4. Once the virtual environment is created, you need to activate it:
+
+   - On Windows:
+
+     ```bash
+     .\pingu_env\Scripts\activate
+     ```
+
+   - On macOS/Linux:
+
+     ```bash
+     source pingu_env/bin/activate
+     ```
+
+   After activation, you should see the virtual environment's name in your command prompt or terminal, indicating that you are now working within the `pingu_env` environment.
+
+To deactivate the virtual environment when you're done, simply run:
+
+```bash
+deactivate
+```
+
+This will return you to the global Python environment.
+
+
 ### Raspberry Pi Pinout
 
 For your reference, here is a basic pinout diagram of the Raspberry Pi GPIO (General Purpose Input/Output) pins:
