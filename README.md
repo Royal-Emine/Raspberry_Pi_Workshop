@@ -55,6 +55,53 @@ To facilitate better communication with other Raspberry Pi Hats or electronic mo
 
 These detailed instructions will vary based on the specific ports and protocols required for your project. Refer to the documentation of your Raspberry Pi Hats or electronic modules for precise information on port configurations.
 
+### *Enabling VNC* (Virtual Network Computing) 
+on your Raspberry Pi over SSH using PuTTY involves a few steps. Follow these instructions:
+
+1. **Connect to Raspberry Pi:**
+   - Open PuTTY and enter the IP address of your Raspberry Pi.
+   - Click "Open" to initiate the SSH connection.
+   - Log in with your Raspberry Pi username and password.
+
+2. **Open the Raspberry Pi Configuration Tool:**
+   - In the SSH terminal, type the following command and press Enter:
+     ```bash
+     sudo raspi-config
+     ```
+
+3. **Navigate to Interfacing Options:**
+   - In the Raspberry Pi Configuration Tool, use the arrow keys to navigate to "Interfacing Options."
+   - Press Enter to select it.
+
+4. **Enable VNC:**
+   - In the "Interfacing Options" menu, navigate to "VNC" and press Enter.
+   - You will be prompted to enable VNC Server. Select "Yes" and press Enter.
+
+5. **Finish Configuration:**
+   - After enabling VNC, use the arrow keys to select "Finish."
+   - Press Enter to exit the configuration tool.
+
+6. **Restart Your Raspberry Pi:**
+   - To apply the changes, restart your Raspberry Pi:
+     ```bash
+     sudo reboot
+     ```
+
+7. **Connect Using VNC Viewer:**
+   - Once your Raspberry Pi has restarted, open VNC Viewer on your computer.
+   - Enter the IP address of your Raspberry Pi in VNC Viewer.
+   - Click "Connect" to establish the VNC connection.
+
+8. **Authenticate:**
+   - Enter your Raspberry Pi username and password when prompted.
+   - You should now have access to the Raspberry Pi's desktop environment through VNC Viewer.
+
+**Note:**
+- Ensure that your Raspberry Pi and the computer running VNC Viewer are on the same network.
+- VNC Server is now enabled, allowing you to remotely access the graphical interface of your Raspberry Pi.
+
+These steps should guide you through the process of enabling and using VNC Server on your Raspberry Pi over SSH using PuTTY.
+
 ### Setup Environment in Python (its a good practice)
 
 Sure thing! To create a virtual environment in Python named `pingu_env` and activate it, you can follow these steps:
