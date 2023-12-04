@@ -226,6 +226,38 @@ Follow these steps to set up an example project using the DHT11 sensor with a Ra
    > ```
    > Note: Customize your code based on your specific project requirements. Ensure that your DHT11 sensor is correctly connected to the Raspberry Pi GPIO pins.
 
+7. **ERROR Handling**
+   The error which you might get is:
+   ```bash
+   Traceback (most recent call last):
+   File "/home/pi/Documents/mydemoproject/Adafruit_Python_DHT/temphumi.py", line 6, in <module>
+    humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+   File "/home/pi/Documents/mydemoproject/Adafruit_Python_DHT/Adafruit_DHT/common.py", line 94, in read_retry
+    humidity, temperature = read(sensor, pin, platform)
+   File "/home/pi/Documents/mydemoproject/Adafruit_Python_DHT/Adafruit_DHT/common.py", line 80, in read
+    platform = get_platform()
+   File "/home/pi/Documents/mydemoproject/Adafruit_Python_DHT/Adafruit_DHT/common.py", line 55, in get_platform
+    from . import Raspberry_Pi_2
+   File "/home/pi/Documents/mydemoproject/Adafruit_Python_DHT/Adafruit_DHT/Raspberry_Pi_2.py", line 22, in <module>
+    from . import Raspberry_Pi_2_Driver as driver
+   ImportError: cannot import name 'Raspberry_Pi_2_Driver' from 'Adafruit_DHT' (/home/pi/Documents/mydemoproject/Adafruit_Python_DHT/Adafruit_DHT/_init_.py)
+   ```
+   So, for temporary fix you go to ```/Adafruit_Python_DHT/examples``` folder and create your python code there itseld and dumpt the following code
+   ```python
+   #!/usr/bin/python
+   import sys
+   import Adafruit_DHT
+
+   while True:
+       humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT11, 4)
+       if humidity is not None and temperature is not None:
+           print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
+       else:
+           print('Failed to get reading. Try again!')
+           sys.exit(1)
+   ```
+   and Run as ```sudo python3 FILENAME.py```
+
 This example project provides a hands-on experience in setting up a Python environment, installing libraries, and creating a simple script for the DHT11 sensor on a Raspberry Pi.
 
 # Document Process
