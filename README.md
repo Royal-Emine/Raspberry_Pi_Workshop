@@ -4,7 +4,7 @@
 
 ### Setup for First-time
 
-- **Setup Headless Mode** - [Youtube](#)
+- **Setup Headless Mode** - [Youtube](https://youtu.be/AlM8O01QY9c)
 
 During this process, install the following software:
   - [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
